@@ -38,6 +38,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         idField = new javax.swing.JTextField();
         passwordField = new javax.swing.JPasswordField();
         registerNewUserLabel = new javax.swing.JLabel();
+        registerConfirmationButton = new javax.swing.JButton();
 
         nameField.setText("jTextField1");
         nameField.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +67,8 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
 
         registerNewUserLabel.setText("Register New User");
 
+        registerConfirmationButton.setText("jButton1");
+
         jDesktopPane1.setLayer(nameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(nameLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(emailField, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -77,29 +80,32 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayer(idField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(passwordField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(registerNewUserLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(registerConfirmationButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(idLabel)
-                    .addComponent(emailLabel)
-                    .addComponent(nameLabel)
-                    .addComponent(nameField)
-                    .addComponent(emailField)
-                    .addComponent(idField)
-                    .addComponent(passwordLabel)
-                    .addComponent(phoneLabel)
-                    .addComponent(phoneField)
-                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap(160, Short.MAX_VALUE)
                 .addComponent(registerNewUserLabel)
                 .addGap(204, 204, 204))
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(registerConfirmationButton)
+                    .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(idLabel)
+                        .addComponent(emailLabel)
+                        .addComponent(nameLabel)
+                        .addComponent(nameField)
+                        .addComponent(emailField)
+                        .addComponent(idField)
+                        .addComponent(passwordLabel)
+                        .addComponent(phoneLabel)
+                        .addComponent(phoneField)
+                        .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +132,9 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
                 .addComponent(passwordLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(registerConfirmationButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jDesktopPane1, java.awt.BorderLayout.PAGE_START);
@@ -151,6 +159,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JTextField phoneField;
     private javax.swing.JLabel phoneLabel;
+    private javax.swing.JButton registerConfirmationButton;
     private javax.swing.JLabel registerNewUserLabel;
     // End of variables declaration//GEN-END:variables
 }
