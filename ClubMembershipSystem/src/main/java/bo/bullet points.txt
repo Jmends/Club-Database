@@ -1,0 +1,27 @@
+rough code layout/bullet points:
+
+Login screen:
+returning users login with email and password
+
+new user screen: prompts to add all info
+-school ID
+-email
+-password
+-first and last name
+-whatever else i forgot to add that we use in the database
+
+new users are added to database from login
+
+users can create clubs, adds it to database
+
+clubs can be searched for
+
+users can sign up for clubs
+
+person who creates the club becomes admin for that specific club
+
+clubs can have multiple admins
+
+admins can create and delete posts for clubs
+
+all users can see who is in the club they have joined (as well as email?)
