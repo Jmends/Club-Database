@@ -8,12 +8,12 @@ package dbmsdemo;
  *
  * @author J Mends
  */
-public class frmAddAnnouncment extends javax.swing.JInternalFrame {
+public class frmAddAnnouncement extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form frmAddAnnouncment
      */
-    public frmAddAnnouncment() {
+    public frmAddAnnouncement() {
         initComponents();
     }
 
