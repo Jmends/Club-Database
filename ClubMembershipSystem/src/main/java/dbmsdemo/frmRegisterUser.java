@@ -27,25 +27,130 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        nameField = new javax.swing.JTextField();
+        nameLabel = new javax.swing.JLabel();
+        emailField = new javax.swing.JTextField();
+        emailLabel = new javax.swing.JLabel();
+        phoneField = new javax.swing.JTextField();
+        phoneLabel = new javax.swing.JLabel();
+        idLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
+        idField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
+        registerNewUserLabel = new javax.swing.JLabel();
+
+        nameField.setText("jTextField1");
+        nameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameFieldActionPerformed(evt);
+            }
+        });
+
+        nameLabel.setText("Name");
+
+        emailField.setText("jTextField2");
+
+        emailLabel.setText("Email");
+
+        phoneField.setText("jTextField3");
+
+        phoneLabel.setText("Phone Number");
+
+        idLabel.setText("School ID");
+
+        passwordLabel.setText("Password");
+
+        idField.setText("jTextField4");
+
+        passwordField.setText("jPasswordField1");
+
+        registerNewUserLabel.setText("Register New User");
+
+        jDesktopPane1.setLayer(nameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(nameLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(emailField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(emailLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(phoneField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(phoneLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(idLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(passwordLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(idField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(passwordField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(registerNewUserLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(idLabel)
+                    .addComponent(emailLabel)
+                    .addComponent(nameLabel)
+                    .addComponent(nameField)
+                    .addComponent(emailField)
+                    .addComponent(idField)
+                    .addComponent(passwordLabel)
+                    .addComponent(phoneLabel)
+                    .addComponent(phoneField)
+                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap(160, Short.MAX_VALUE)
+                .addComponent(registerNewUserLabel)
+                .addGap(204, 204, 204))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(registerNewUserLabel)
+                .addGap(10, 10, 10)
+                .addComponent(nameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(emailLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(phoneLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(phoneField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(idLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passwordLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jDesktopPane1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jDesktopPane1, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameFieldActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JTextField idField;
+    private javax.swing.JLabel idLabel;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JTextField nameField;
+    private javax.swing.JLabel nameLabel;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JTextField phoneField;
+    private javax.swing.JLabel phoneLabel;
+    private javax.swing.JLabel registerNewUserLabel;
     // End of variables declaration//GEN-END:variables
 }
