@@ -6,14 +6,14 @@ package dbmsdemo;
 
 /**
  *
- * @author kligs
+ * @author J Mends
  */
-public class FormLogin extends javax.swing.JInternalFrame {
+public class frmViewAnnouncement extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form FormLogin
+     * Creates new form frmViewAnnouncement
      */
-    public FormLogin() {
+    public frmViewAnnouncement() {
         initComponents();
     }
 
@@ -26,25 +26,15 @@ public class FormLogin extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-
-        jDesktopPane1.setLayout(new java.awt.BorderLayout());
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(383, 383, 383)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(497, Short.MAX_VALUE))
+            .addGap(0, 394, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(166, 166, 166)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(309, Short.MAX_VALUE))
+            .addGap(0, 274, Short.MAX_VALUE)
         );
 
         pack();
@@ -52,6 +42,5 @@ public class FormLogin extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
     // End of variables declaration//GEN-END:variables
 }

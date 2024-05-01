@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package dbmsdemo;
-import dbmsdemo.FormLogin;
+import dbmsdemo.frmLogin;
 import java.awt.Toolkit;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JInternalFrame;
 
 
 /**
@@ -13,14 +16,34 @@ import java.awt.Toolkit;
  */
 public class frmMain extends javax.swing.JFrame {
 
-    FormLogin FormLogin = new FormLogin();
+    frmLogin frmLogin = new frmLogin();
+    frmAddAnnouncement frmAddAnnouncement = new frmAddAnnouncement();
+    frmAddEvent frmAddEvent = new frmAddEvent();
+    frmAddClub frmAddClub = new frmAddClub();
+    frmRegisterUser frmRegisterUser = new frmRegisterUser();
+    frmViewAnnouncement frmViewAnnouncement = new frmViewAnnouncement();
+    frmViewClub frmViewClub = new frmViewClub();
+    frmViewEvent frmViewEvent = new frmViewEvent();
+    Map<String,JInternalFrame> forms = new HashMap<>();
+    
     /**
      * Creates new form frmMain
      */
-    public frmMain() {
+    public frmMain(){
         initComponents();
+        forms.put("frmLogin", frmLogin);
+        forms.put("frmAddAnnouncement", frmAddAnnouncement);
+        forms.put("frmAddEvent", frmAddEvent);
+        forms.put("frmAddClub", frmAddClub);
+        forms.put("frmRegisterUser", frmRegisterUser);
+        forms.put("frmViewAnnouncements", frmViewAnnouncement);
+        forms.put("frmViewEvent", frmViewEvent);
+        forms.put("frmViewClub", frmViewClub);
+        
+     forms.values().forEach((frm) ->{
+         jdpContainer.add(frm);
+     });
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,7 +53,7 @@ public class frmMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jdpContainer = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuFile = new javax.swing.JMenu();
         mniLogin = new javax.swing.JMenuItem();
@@ -53,18 +76,18 @@ public class frmMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jdpContainerLayout = new javax.swing.GroupLayout(jdpContainer);
+        jdpContainer.setLayout(jdpContainerLayout);
+        jdpContainerLayout.setHorizontalGroup(
+            jdpContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 481, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jdpContainerLayout.setVerticalGroup(
+            jdpContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 397, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jDesktopPane1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jdpContainer, java.awt.BorderLayout.CENTER);
 
         mnuFile.setText("File");
 
@@ -168,8 +191,8 @@ public class frmMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JDesktopPane jdpContainer;
     private javax.swing.JMenuItem mniCreateAnnouncement;
     private javax.swing.JMenuItem mniCreateClub;
     private javax.swing.JMenuItem mniCreateEvents;
