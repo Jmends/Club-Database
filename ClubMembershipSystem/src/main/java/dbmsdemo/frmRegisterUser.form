@@ -90,7 +90,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="nameField">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
+            <Property name="text" type="java.lang.String" value="Ex: John Smith"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameFieldActionPerformed"/>
@@ -103,7 +103,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="emailField">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField2"/>
+            <Property name="text" type="java.lang.String" value="Ex: example@email.com"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="emailLabel">
@@ -113,7 +113,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="phoneField">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField3"/>
+            <Property name="text" type="java.lang.String" value="Ex: 123-456-7890"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="phoneLabel">
@@ -133,13 +133,10 @@
         </Component>
         <Component class="javax.swing.JTextField" name="idField">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField4"/>
+            <Property name="text" type="java.lang.String" value="Ex: 111111"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="passwordField">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="registerNewUserLabel">
           <Properties>

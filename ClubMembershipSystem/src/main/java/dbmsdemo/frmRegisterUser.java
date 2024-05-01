@@ -40,7 +40,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         registerNewUserLabel = new javax.swing.JLabel();
         registerConfirmationButton = new javax.swing.JButton();
 
-        nameField.setText("jTextField1");
+        nameField.setText("Ex: John Smith");
         nameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameFieldActionPerformed(evt);
@@ -49,11 +49,11 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
 
         nameLabel.setText("Name");
 
-        emailField.setText("jTextField2");
+        emailField.setText("Ex: example@email.com");
 
         emailLabel.setText("Email");
 
-        phoneField.setText("jTextField3");
+        phoneField.setText("Ex: 123-456-7890");
 
         phoneLabel.setText("Phone Number");
 
@@ -61,9 +61,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
 
         passwordLabel.setText("Password");
 
-        idField.setText("jTextField4");
-
-        passwordField.setText("jPasswordField1");
+        idField.setText("Ex: 111111");
 
         registerNewUserLabel.setText("Register New User");
 

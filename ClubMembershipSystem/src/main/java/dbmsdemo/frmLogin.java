@@ -40,10 +40,6 @@ public class frmLogin extends javax.swing.JInternalFrame {
 
         loginLabel.setText("Login");
 
-        emailLoginField.setText("jTextField1");
-
-        passwordLoginField.setText("jPasswordField1");
-
         emailLabel.setText("Email");
 
         passwordLabel.setText("Password");
@@ -56,6 +52,11 @@ public class frmLogin extends javax.swing.JInternalFrame {
         });
 
         registerScreenButton.setText("jButton1");
+        registerScreenButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerScreenButtonActionPerformed(evt);
+            }
+        });
 
         registerPromptLabel.setText("Not a registered user? Register here!");
 
@@ -118,6 +119,10 @@ public class frmLogin extends javax.swing.JInternalFrame {
     private void loginConfirmationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginConfirmationButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginConfirmationButtonActionPerformed
+
+    private void registerScreenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerScreenButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerScreenButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
