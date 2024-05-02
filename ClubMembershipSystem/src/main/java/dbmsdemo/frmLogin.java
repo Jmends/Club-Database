@@ -44,14 +44,14 @@ public class frmLogin extends javax.swing.JInternalFrame {
 
         passwordLabel.setText("Password");
 
-        loginConfirmationButton.setText("jButton2");
+        loginConfirmationButton.setText("Enter");
         loginConfirmationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginConfirmationButtonActionPerformed(evt);
             }
         });
 
-        registerScreenButton.setText("jButton1");
+        registerScreenButton.setText("Register");
         registerScreenButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerScreenButtonActionPerformed(evt);

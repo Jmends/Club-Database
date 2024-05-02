@@ -65,7 +65,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
 
         registerNewUserLabel.setText("Register New User");
 
-        registerConfirmationButton.setText("jButton1");
+        registerConfirmationButton.setText("Enter");
 
         jDesktopPane1.setLayer(nameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(nameLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);

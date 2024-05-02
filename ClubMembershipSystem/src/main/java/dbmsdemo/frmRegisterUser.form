@@ -145,7 +145,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="registerConfirmationButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton1"/>
+            <Property name="text" type="java.lang.String" value="Enter"/>
           </Properties>
         </Component>
       </SubComponents>
