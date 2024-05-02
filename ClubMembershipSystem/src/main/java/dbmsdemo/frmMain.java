@@ -58,6 +58,7 @@ public class frmMain extends javax.swing.JFrame {
         mnuFile = new javax.swing.JMenu();
         mniLogin = new javax.swing.JMenuItem();
         mniLogout = new javax.swing.JMenuItem();
+        mniRegisterUser = new javax.swing.JCheckBoxMenuItem();
         mniExit = new javax.swing.JMenuItem();
         mnuView = new javax.swing.JMenu();
         mniViewClub = new javax.swing.JMenuItem();
@@ -92,12 +93,31 @@ public class frmMain extends javax.swing.JFrame {
         mnuFile.setText("File");
 
         mniLogin.setText("Login..");
+        mniLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniLoginActionPerformed(evt);
+            }
+        });
         mnuFile.add(mniLogin);
 
         mniLogout.setText("Logout");
         mnuFile.add(mniLogout);
 
+        mniRegisterUser.setSelected(true);
+        mniRegisterUser.setText("Register User ");
+        mniRegisterUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniRegisterUserActionPerformed(evt);
+            }
+        });
+        mnuFile.add(mniRegisterUser);
+
         mniExit.setText("Exit");
+        mniExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniExitActionPerformed(evt);
+            }
+        });
         mnuFile.add(mniExit);
 
         jMenuBar1.add(mnuFile);
@@ -153,6 +173,22 @@ public class frmMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void mniLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniLoginActionPerformed
+        // TODO add your handling code here:
+//        frmLogin frmLogin = new frmLogin();
+        frmLogin.setVisible(true);
+    }//GEN-LAST:event_mniLoginActionPerformed
+
+    private void mniRegisterUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniRegisterUserActionPerformed
+        // TODO add your handling code here:
+        frmRegisterUser.setVisible(true);
+    }//GEN-LAST:event_mniRegisterUserActionPerformed
+
+    private void mniExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniExitActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_mniExitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -202,6 +238,7 @@ public class frmMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem mniManageAnnouncements;
     private javax.swing.JMenuItem mniManageClub;
     private javax.swing.JMenuItem mniManageEvents;
+    private javax.swing.JCheckBoxMenuItem mniRegisterUser;
     private javax.swing.JMenuItem mniSearchClub;
     private javax.swing.JMenuItem mniViewAnnouncement;
     private javax.swing.JMenuItem mniViewClub;
