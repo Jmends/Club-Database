@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup4">
+    </Component>
+  </NonVisualComponents>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
@@ -14,18 +24,150 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-68,0,0,2,67"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="394" max="32767" attributes="0"/>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="274" max="32767" attributes="0"/>
-      </Group>
-    </DimensionLayout>
-  </Layout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+          <BorderConstraints direction="Center"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="createClubLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="checkboxMonday" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="checkboxTuesday" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="checkboxWednesday" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="checkboxThursday" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="checkboxFriday" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="selectClubLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="whereMeetingLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="clubLocationField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="clubNameField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="nameClubLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="clubTimeField" alignment="0" pref="202" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="clubTimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="submitButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="359" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="createClubLabel" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="nameClubLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Component id="clubNameField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="selectClubLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="checkboxMonday" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="checkboxTuesday" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="checkboxWednesday" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="checkboxThursday" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="checkboxFriday" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="whereMeetingLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="clubLocationField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="clubTimeLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  <Component id="clubTimeField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="submitButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="47" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="createClubLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Create Club"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkboxMonday">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkboxTuesday">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tuesday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkboxWednesday">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wednesday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkboxThursday">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thursday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkboxFriday">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Friday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="selectClubLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Select the club meeting day(s)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="clubLocationField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clubLocationFieldActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="whereMeetingLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Where will the club be meeting?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="clubNameField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clubNameFieldActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="nameClubLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="What is the name of the club?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="clubTimeField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="clubTimeLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="What time will the club be meeting?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="submitButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Submit"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>

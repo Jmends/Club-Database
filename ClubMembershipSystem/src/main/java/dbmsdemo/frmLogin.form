@@ -25,15 +25,22 @@
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="emailLoginField" max="32767" attributes="0"/>
-                              <Component id="passwordLoginField" pref="168" max="32767" attributes="0"/>
-                          </Group>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Component id="loginConfirmationButton" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="emailLoginField" max="32767" attributes="0"/>
+                                              <Component id="passwordLoginField" pref="168" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>

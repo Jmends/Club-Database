@@ -78,14 +78,18 @@ public class frmLogin extends javax.swing.JInternalFrame {
                         .addGap(84, 84, 84)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(emailLabel)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(emailLoginField)
-                                .addComponent(passwordLoginField, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(loginConfirmationButton, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(passwordLabel)
-                                    .addGap(274, 274, 274)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(emailLoginField)
+                                                .addComponent(passwordLoginField, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
+                                            .addGap(186, 186, 186))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(passwordLabel)
+                                            .addGap(304, 304, 304)))
                                     .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(262, 262, 262)
@@ -130,18 +134,18 @@ public class frmLogin extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginConfirmationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginConfirmationButtonActionPerformed
+    private void loginClosebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginClosebtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginConfirmationButtonActionPerformed
+        dispose();
+    }//GEN-LAST:event_loginClosebtnActionPerformed
 
     private void registerScreenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerScreenButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_registerScreenButtonActionPerformed
 
-    private void loginClosebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginClosebtnActionPerformed
+    private void loginConfirmationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginConfirmationButtonActionPerformed
         // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_loginClosebtnActionPerformed
+    }//GEN-LAST:event_loginConfirmationButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
