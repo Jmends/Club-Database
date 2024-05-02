@@ -32,12 +32,6 @@ public class frmAddClub extends javax.swing.JInternalFrame {
         buttonGroup4 = new javax.swing.ButtonGroup();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         createClubLabel = new javax.swing.JLabel();
-        checkboxMonday = new javax.swing.JCheckBox();
-        checkboxTuesday = new javax.swing.JCheckBox();
-        checkboxWednesday = new javax.swing.JCheckBox();
-        checkboxThursday = new javax.swing.JCheckBox();
-        checkboxFriday = new javax.swing.JCheckBox();
-        selectClubLabel = new javax.swing.JLabel();
         clubLocationField = new javax.swing.JTextField();
         whereMeetingLabel = new javax.swing.JLabel();
         clubNameField = new javax.swing.JTextField();
@@ -45,20 +39,10 @@ public class frmAddClub extends javax.swing.JInternalFrame {
         clubTimeField = new javax.swing.JTextField();
         clubTimeLabel = new javax.swing.JLabel();
         submitButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        clubDaysField = new javax.swing.JTextField();
 
         createClubLabel.setText("Create Club");
-
-        checkboxMonday.setText("Monday");
-
-        checkboxTuesday.setText("Tuesday");
-
-        checkboxWednesday.setText("Wednesday");
-
-        checkboxThursday.setText("Thursday");
-
-        checkboxFriday.setText("Friday");
-
-        selectClubLabel.setText("Select the club meeting day(s)");
 
         clubLocationField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,13 +64,15 @@ public class frmAddClub extends javax.swing.JInternalFrame {
 
         submitButton.setText("Submit");
 
+        jLabel1.setText("What days (Monday, Tuesday, etc..) will the club be meeting?");
+
+        clubDaysField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clubDaysFieldActionPerformed(evt);
+            }
+        });
+
         jDesktopPane1.setLayer(createClubLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(checkboxMonday, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(checkboxTuesday, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(checkboxWednesday, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(checkboxThursday, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(checkboxFriday, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(selectClubLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(clubLocationField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(whereMeetingLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(clubNameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -94,6 +80,8 @@ public class frmAddClub extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayer(clubTimeField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(clubTimeLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(submitButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(clubDaysField, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -104,20 +92,16 @@ public class frmAddClub extends javax.swing.JInternalFrame {
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(createClubLabel)
-                        .addComponent(checkboxMonday)
-                        .addComponent(checkboxTuesday)
-                        .addComponent(checkboxWednesday)
-                        .addComponent(checkboxThursday)
-                        .addComponent(checkboxFriday)
-                        .addComponent(selectClubLabel)
                         .addComponent(whereMeetingLabel)
                         .addComponent(clubLocationField)
                         .addComponent(clubNameField)
                         .addComponent(nameClubLabel)
                         .addComponent(clubTimeField, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE))
                     .addComponent(clubTimeLabel)
-                    .addComponent(submitButton))
-                .addContainerGap(359, Short.MAX_VALUE))
+                    .addComponent(submitButton)
+                    .addComponent(jLabel1)
+                    .addComponent(clubDaysField, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,18 +113,10 @@ public class frmAddClub extends javax.swing.JInternalFrame {
                 .addGap(3, 3, 3)
                 .addComponent(clubNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(selectClubLabel)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkboxMonday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkboxTuesday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkboxWednesday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkboxThursday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkboxFriday)
-                .addGap(22, 22, 22)
+                .addComponent(clubDaysField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(whereMeetingLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(clubLocationField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -150,7 +126,7 @@ public class frmAddClub extends javax.swing.JInternalFrame {
                 .addComponent(clubTimeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(submitButton)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         getContentPane().add(jDesktopPane1, java.awt.BorderLayout.CENTER);
@@ -166,25 +142,25 @@ public class frmAddClub extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clubNameFieldActionPerformed
 
+    private void clubDaysFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clubDaysFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clubDaysFieldActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.JCheckBox checkboxFriday;
-    private javax.swing.JCheckBox checkboxMonday;
-    private javax.swing.JCheckBox checkboxThursday;
-    private javax.swing.JCheckBox checkboxTuesday;
-    private javax.swing.JCheckBox checkboxWednesday;
+    private javax.swing.JTextField clubDaysField;
     private javax.swing.JTextField clubLocationField;
     private javax.swing.JTextField clubNameField;
     private javax.swing.JTextField clubTimeField;
     private javax.swing.JLabel clubTimeLabel;
     private javax.swing.JLabel createClubLabel;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel nameClubLabel;
-    private javax.swing.JLabel selectClubLabel;
     private javax.swing.JButton submitButton;
     private javax.swing.JLabel whereMeetingLabel;
     // End of variables declaration//GEN-END:variables

@@ -44,12 +44,6 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="createClubLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="checkboxMonday" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="checkboxTuesday" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="checkboxWednesday" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="checkboxThursday" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="checkboxFriday" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="selectClubLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="whereMeetingLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="clubLocationField" alignment="0" max="32767" attributes="0"/>
                           <Component id="clubNameField" alignment="0" max="32767" attributes="0"/>
@@ -58,8 +52,10 @@
                       </Group>
                       <Component id="clubTimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="submitButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="clubDaysField" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="359" max="32767" attributes="0"/>
+                  <EmptySpace pref="239" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -73,18 +69,10 @@
                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="clubNameField" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="selectClubLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="checkboxMonday" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="checkboxTuesday" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="checkboxWednesday" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="checkboxThursday" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="checkboxFriday" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="clubDaysField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="whereMeetingLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="clubLocationField" min="-2" max="-2" attributes="0"/>
@@ -94,7 +82,7 @@
                   <Component id="clubTimeField" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="submitButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                  <EmptySpace pref="149" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -103,36 +91,6 @@
         <Component class="javax.swing.JLabel" name="createClubLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Create Club"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="checkboxMonday">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Monday"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="checkboxTuesday">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Tuesday"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="checkboxWednesday">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Wednesday"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="checkboxThursday">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Thursday"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="checkboxFriday">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Friday"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="selectClubLabel">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Select the club meeting day(s)"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="clubLocationField">
@@ -166,6 +124,16 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="What days (Monday, Tuesday, etc..) will the club be meeting?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="clubDaysField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clubDaysFieldActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
