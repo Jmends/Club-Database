@@ -233,6 +233,8 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
                 
             }
             
+            con.close();
+            
         } catch (SQLException ex) {
             Logger.getLogger(frmRegisterUser.class.getName()).log(Level.SEVERE, null, ex);
         }

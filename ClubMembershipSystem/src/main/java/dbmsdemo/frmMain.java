@@ -4,7 +4,7 @@
  */
 package dbmsdemo;
 import dbmsdemo.*;
-import dbmsdemo.frmViewUsers;
+//import dbmsdemo.frmViewUsers;
 import java.awt.Toolkit;
 import java.util.HashMap;
 import java.util.Map;
@@ -126,9 +126,19 @@ public class frmMain extends javax.swing.JFrame {
         mnuView.add(mniViewClub);
 
         mniViewAnnouncement.setText("Announcements");
+        mniViewAnnouncement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniViewAnnouncementActionPerformed(evt);
+            }
+        });
         mnuView.add(mniViewAnnouncement);
 
         mniViewEvent.setText("Events");
+        mniViewEvent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniViewEventActionPerformed(evt);
+            }
+        });
         mnuView.add(mniViewEvent);
 
         mniViewUsers.setText("Users");
@@ -179,9 +189,19 @@ public class frmMain extends javax.swing.JFrame {
         mnuManage.setText("Manage");
 
         mniManageClub.setText("Club");
+        mniManageClub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniManageClubActionPerformed(evt);
+            }
+        });
         mnuManage.add(mniManageClub);
 
         mniManageAnnouncements.setText("Announcements");
+        mniManageAnnouncements.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniManageAnnouncementsActionPerformed(evt);
+            }
+        });
         mnuManage.add(mniManageAnnouncements);
 
         mniManageEvents.setText("Events");
@@ -235,6 +255,27 @@ public class frmMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         frmViewClub.setVisible(true);
     }//GEN-LAST:event_mniViewClubActionPerformed
+
+    private void mniViewEventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniViewEventActionPerformed
+        // TODO add your handling code here:
+        frmViewEvent.setVisible(true);
+    }//GEN-LAST:event_mniViewEventActionPerformed
+
+    private void mniViewAnnouncementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniViewAnnouncementActionPerformed
+        // TODO add your handling code here:
+        frmViewAnnouncement.setVisible(true);
+    }//GEN-LAST:event_mniViewAnnouncementActionPerformed
+
+    private void mniManageAnnouncementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniManageAnnouncementsActionPerformed
+        // TODO add your handling code here:
+        frmManageAnnouncement manageAnnouncement = new frmManageAnnouncement();
+        manageAnnouncement.setVisible(true);
+    }//GEN-LAST:event_mniManageAnnouncementsActionPerformed
+
+    private void mniManageClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniManageClubActionPerformed
+        // TODO add your handling code here:
+        frmManageClub.setVisible(true);
+    }//GEN-LAST:event_mniManageClubActionPerformed
 
     /**
      * @param args the command line arguments
