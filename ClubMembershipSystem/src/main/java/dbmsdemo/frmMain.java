@@ -274,7 +274,7 @@ public class frmMain extends javax.swing.JFrame {
 
     private void mniManageClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniManageClubActionPerformed
         // TODO add your handling code here:
-        frmManageClub.setVisible(true);
+        //frmManageClub.setVisible(true);
     }//GEN-LAST:event_mniManageClubActionPerformed
 
     /**
