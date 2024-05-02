@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package dbmsdemo;
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 
 
 /**
@@ -10,7 +15,9 @@ package dbmsdemo;
  * @author kligs
  */
 public class frmRegisterUser extends javax.swing.JInternalFrame {
-
+    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/clubdatabase?useSSL=false&serverTimezone=UTC";
+    private static final String USER = "root";
+    private static final String PASSWORD = "root";
     /**
      * Creates new form FormRegisterUser
      */
@@ -41,8 +48,8 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         registerNewUserLabel = new javax.swing.JLabel();
         registerConfirmationButton = new javax.swing.JButton();
         registerClosebtn = new javax.swing.JButton();
+        adminBtn = new javax.swing.JRadioButton();
 
-        nameField.setText("Ex: John Smith");
         nameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameFieldActionPerformed(evt);
@@ -51,11 +58,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
 
         nameLabel.setText("Name");
 
-        emailField.setText("Ex: example@email.com");
-
         emailLabel.setText("Email");
-
-        phoneField.setText("Ex: 123-456-7890");
 
         phoneLabel.setText("Phone Number");
 
@@ -63,11 +66,14 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
 
         passwordLabel.setText("Password");
 
-        idField.setText("Ex: 111111");
-
         registerNewUserLabel.setText("Register New User");
 
         registerConfirmationButton.setText("Enter");
+        registerConfirmationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerConfirmationButtonActionPerformed(evt);
+            }
+        });
 
         registerClosebtn.setText("Close");
         registerClosebtn.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +81,8 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
                 registerClosebtnActionPerformed(evt);
             }
         });
+
+        adminBtn.setText("admin");
 
         jDesktopPane1.setLayer(nameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(nameLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -89,42 +97,49 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayer(registerNewUserLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(registerConfirmationButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(registerClosebtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(adminBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(160, Short.MAX_VALUE)
-                .addComponent(registerNewUserLabel)
-                .addGap(204, 204, 204))
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(registerConfirmationButton)
-                        .addGap(83, 83, 83)
-                        .addComponent(registerClosebtn))
-                    .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(idLabel)
-                        .addComponent(emailLabel)
                         .addComponent(nameLabel)
-                        .addComponent(nameField)
-                        .addComponent(emailField)
-                        .addComponent(idField)
-                        .addComponent(passwordLabel)
-                        .addComponent(phoneLabel)
-                        .addComponent(phoneField)
-                        .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(registerNewUserLabel)
+                        .addGap(204, 204, 204))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                                .addComponent(registerConfirmationButton)
+                                .addGap(83, 83, 83)
+                                .addComponent(registerClosebtn)
+                                .addGap(53, 53, 53)
+                                .addComponent(adminBtn))
+                            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(idLabel)
+                                .addComponent(emailLabel)
+                                .addComponent(nameField)
+                                .addComponent(emailField)
+                                .addComponent(idField)
+                                .addComponent(passwordLabel)
+                                .addComponent(phoneLabel)
+                                .addComponent(phoneField)
+                                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(81, Short.MAX_VALUE))))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(registerNewUserLabel)
-                .addGap(10, 10, 10)
-                .addComponent(nameLabel)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addComponent(registerNewUserLabel)
+                        .addGap(20, 20, 20))
+                    .addComponent(nameLabel, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -143,10 +158,11 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
                 .addComponent(passwordLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(24, 24, 24)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(registerConfirmationButton)
-                    .addComponent(registerClosebtn))
+                    .addComponent(registerClosebtn)
+                    .addComponent(adminBtn))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -169,13 +185,67 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         String email = emailField.getText();
         String phoneNumber = phoneField.getText();
         String schoolID = idField.getText();
-        char[] passwordchar = passwordField.getPassword();
-        String password = new String(passwordchar);
+        
         
         
     }
+    private void registerConfirmationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmationButtonActionPerformed
+        // TODO add your handling code here:
+        Connection con;
+        char[] passwordchar = passwordField.getPassword();
+        String password = new String(passwordchar);
+        int schoolID = Integer.parseInt(idField.getText());
+        try {
+            if(adminBtn.isSelected()){
+               con = DriverManager.getConnection(DB_URL,USER,PASSWORD);
+               PreparedStatement st = con.prepareStatement("INSERT INTO User(schoolId,email,name,phoneNumber,password)values(?,?,?,?,?)");
+            
+                st.setInt(1,Integer.parseInt(idField.getText()));
+                st.setString(2,emailField.getText());
+                st.setString(3,nameField.getText());
+                st.setString(4, phoneField.getText());
+                st.setString(5,password);
+                st.executeUpdate();
+                
+                PreparedStatement adminSt = con.prepareStatement("INSERT INTO Admin(schoolId)values(?)");
+                adminSt.setInt(1,schoolID);
+                adminSt.executeUpdate();
+                
+                st.close();
+                adminSt.close();
+                
+            } else{
+                con = DriverManager.getConnection(DB_URL,USER,PASSWORD);
+                PreparedStatement st = con.prepareStatement("INSERT INTO User(schoolId,email,name,phoneNumber,password)values(?,?,?,?,?)");
+            
+                st.setInt(1,schoolID);
+                st.setString(2,emailField.getText());
+                st.setString(3,nameField.getText());
+                st.setString(4, phoneField.getText());
+                st.setString(5,password);
+                
+                PreparedStatement memSt = con.prepareStatement("INSERT INTO Member(schoolId)values(?)");
+                memSt.setInt(1, schoolID);
+                memSt.executeUpdate();
+                
+                st.close();
+                memSt.close();
+                
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(frmRegisterUser.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_registerConfirmationButtonActionPerformed
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton adminBtn;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField idField;

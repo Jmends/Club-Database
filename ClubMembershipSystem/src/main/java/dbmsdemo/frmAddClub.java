@@ -4,13 +4,16 @@
  */
 package dbmsdemo;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import dbmsdemo.frmViewClub;
 
 /**
  *
  * @author J Mends
  */
 public class frmAddClub extends javax.swing.JInternalFrame {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/clubdatabase?useSSL=false&serverTimezone=UTC";
+    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/clubdatabase?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
     private static final String PASSWORD = "root";
     /**
@@ -46,6 +49,10 @@ public class frmAddClub extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         clubDaysField = new javax.swing.JTextField();
         createclubclosebtn = new javax.swing.JButton();
+        clubIDField = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        adminIdField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         createClubLabel.setText("Create Club");
 
@@ -74,7 +81,7 @@ public class frmAddClub extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setText("What days (Monday, Tuesday, etc..) will the club be meeting?");
+        jLabel1.setText("What days (yyyy-mm-dd) will the club be meeting?");
 
         clubDaysField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +96,10 @@ public class frmAddClub extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel2.setText("Club ID");
+
+        jLabel3.setText("Admin ID");
+
         jDesktopPane1.setLayer(createClubLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(clubLocationField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(whereMeetingLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -100,6 +111,10 @@ public class frmAddClub extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(clubDaysField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(createclubclosebtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(clubIDField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(adminIdField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -109,54 +124,68 @@ public class frmAddClub extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(createClubLabel)
-                                .addComponent(whereMeetingLabel)
-                                .addComponent(clubLocationField)
-                                .addComponent(clubNameField)
-                                .addComponent(nameClubLabel)
-                                .addComponent(clubTimeField, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE))
-                            .addComponent(clubTimeLabel)
-                            .addComponent(jLabel1)
-                            .addComponent(clubDaysField, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(239, Short.MAX_VALUE))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(submitButton)
+                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(createClubLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(whereMeetingLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(clubLocationField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(clubNameField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nameClubLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(clubTimeField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(createclubclosebtn)
-                        .addGap(202, 202, 202))))
+                        .addGap(19, 19, 19))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(clubTimeLabel)
+                            .addComponent(jLabel1)
+                            .addComponent(clubDaysField, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(submitButton)
+                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(clubIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel2)))
+                                .addGap(54, 54, 54)
+                                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(adminIdField, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(289, Short.MAX_VALUE))))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(createClubLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createClubLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(createclubclosebtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nameClubLabel)
                 .addGap(3, 3, 3)
                 .addComponent(clubNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(clubDaysField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(whereMeetingLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(clubLocationField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clubIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(adminIdField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(clubDaysField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(whereMeetingLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(clubLocationField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(clubTimeLabel)
-                .addGap(1, 1, 1)
+                .addGap(18, 18, 18)
                 .addComponent(clubTimeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(submitButton)
-                        .addContainerGap(149, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                        .addComponent(createclubclosebtn)
-                        .addGap(111, 111, 111))))
+                .addGap(28, 28, 28)
+                .addComponent(submitButton)
+                .addGap(33, 33, 33))
         );
 
         getContentPane().add(jDesktopPane1, java.awt.BorderLayout.CENTER);
@@ -165,7 +194,7 @@ public class frmAddClub extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void clubLocationFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clubLocationFieldActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code her
     }//GEN-LAST:event_clubLocationFieldActionPerformed
 
     private void clubNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clubNameFieldActionPerformed
@@ -175,9 +204,40 @@ public class frmAddClub extends javax.swing.JInternalFrame {
     private void clubDaysFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clubDaysFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_clubDaysFieldActionPerformed
+    
+    private void addDataToViewClubTable(Object[] rowData) {
+    frmViewClub viewClub = new frmViewClub();
+    viewClub.addRow(rowData);
+}
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            Connection con = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+            PreparedStatement st = con.prepareStatement("INSERT INTO Club(clubId,name,meetingLocation,meetingDate,meetingTime,adminId)values(?,?,?,?,?,?)");
+            
+           
+            st.setInt(1,Integer.parseInt(clubIDField.getText()));
+            st.setString(2,clubNameField.getText());
+            st.setString(3,clubLocationField.getText());
+            st.setString(4,clubDaysField.getText());
+            st.setString(5,clubTimeField.getText());
+            st.setInt(6,Integer.parseInt(adminIdField.getText()));
+            
+            st.executeUpdate();
+            
+            Object[] rowData = {clubNameField.getText(), clubTimeField.getText(), clubLocationField.getText(), clubDaysField.getText()};
+            addDataToViewClubTable(rowData);
+            
+            st.close();
+            con.close();
+            
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(frmAddClub.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void createclubclosebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createclubclosebtnActionPerformed
@@ -185,13 +245,16 @@ public class frmAddClub extends javax.swing.JInternalFrame {
         dispose();
     }//GEN-LAST:event_createclubclosebtnActionPerformed
 
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField adminIdField;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JTextField clubDaysField;
+    private javax.swing.JTextField clubIDField;
     private javax.swing.JTextField clubLocationField;
     private javax.swing.JTextField clubNameField;
     private javax.swing.JTextField clubTimeField;
@@ -200,6 +263,8 @@ public class frmAddClub extends javax.swing.JInternalFrame {
     private javax.swing.JButton createclubclosebtn;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel nameClubLabel;
     private javax.swing.JButton submitButton;
     private javax.swing.JLabel whereMeetingLabel;

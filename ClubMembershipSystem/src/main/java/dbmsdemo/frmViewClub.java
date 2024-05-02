@@ -4,18 +4,56 @@
  */
 package dbmsdemo;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author J Mends
  */
 public class frmViewClub extends javax.swing.JInternalFrame {
-
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/clubdatabase?useSSL=false&serverTimezone=UTC";
+    private static final String USER = "root";
+    private static final String PASSWORD = "root";
     /**
      * Creates new form frmViewClub
      */
     public frmViewClub() {
         initComponents();
     }
+    
+    private void loadClubs(){
+        
+//        try(Connection con = DriverManager.getConnection(DB_URL,USER,PASSWORD)){
+//            String sql ="SELECT * From club";
+//            try(Statement st = con.createStatement(); ResultSet rs = st.executeQuery(sql)){
+//                while(rs.next()){
+//                    int clubId = rs.getInt("clubId");
+//                    String clubName = rs.getString("name");
+//                    String clubLocation = rs.getString("meetingLocation");
+//                    String clubMeetingDate = rs.getString("meetingDate");
+//                    String clubMeetingTime = rs.getString("meetingTime");
+//                    int adminId = rs.getInt("adminId");
+//                     clubTableModel.addRow(
+//                            new Object[] { clubId, clubName, clubLocation, clubMeetingDate, clubMeetingTime, adminId });
+//                }
+//            } catch (SQLException ex) {
+//                Logger.getLogger(frmViewClub.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
+    }
+    public void addRow(Object[] rowData) {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.addRow(rowData);
+    }
+    
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,6 +66,7 @@ public class frmViewClub extends javax.swing.JInternalFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        viewClubClosebtn = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -62,12 +101,26 @@ public class frmViewClub extends javax.swing.JInternalFrame {
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
+        viewClubClosebtn.setText("Close");
+        viewClubClosebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewClubClosebtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(viewClubClosebtn, java.awt.BorderLayout.PAGE_START);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void viewClubClosebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewClubClosebtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_viewClubClosebtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton viewClubClosebtn;
     // End of variables declaration//GEN-END:variables
 }

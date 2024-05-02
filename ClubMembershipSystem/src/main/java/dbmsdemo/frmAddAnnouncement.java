@@ -4,6 +4,10 @@
  */
 package dbmsdemo;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
 /**
  *
  * @author J Mends
@@ -44,6 +48,11 @@ public class frmAddAnnouncement extends javax.swing.JInternalFrame {
         });
 
         enterButton.setText("Enter");
+        enterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterButtonActionPerformed(evt);
+            }
+        });
 
         createAnnouncementclosebtn.setText("Close");
         createAnnouncementclosebtn.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +111,12 @@ public class frmAddAnnouncement extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_createAnnouncementclosebtnActionPerformed
+
+    private void enterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterButtonActionPerformed
+        // TODO add your handling code here:
+        //Connection con = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+        //PreparedStatement st = con.prepareStatement("insert into Club(clubId,name,meetingLocation,meetingDate,meetingTime,adminId)values(?,?,?,?,?,?)");
+    }//GEN-LAST:event_enterButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

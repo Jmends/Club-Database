@@ -118,6 +118,11 @@ public class frmMain extends javax.swing.JFrame {
         mnuView.setText("View");
 
         mniViewClub.setText("Club");
+        mniViewClub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniViewClubActionPerformed(evt);
+            }
+        });
         mnuView.add(mniViewClub);
 
         mniViewAnnouncement.setText("Announcements");
@@ -225,6 +230,11 @@ public class frmMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         frmAddEvent.setVisible(true);
     }//GEN-LAST:event_mniCreateEventsActionPerformed
+
+    private void mniViewClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniViewClubActionPerformed
+        // TODO add your handling code here:
+        frmViewClub.setVisible(true);
+    }//GEN-LAST:event_mniViewClubActionPerformed
 
     /**
      * @param args the command line arguments
