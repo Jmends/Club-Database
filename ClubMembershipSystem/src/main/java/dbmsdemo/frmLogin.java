@@ -35,6 +35,7 @@ public class frmLogin extends javax.swing.JInternalFrame {
         loginConfirmationButton = new javax.swing.JButton();
         registerScreenButton = new javax.swing.JButton();
         registerPromptLabel = new javax.swing.JLabel();
+        loginClosebtn = new javax.swing.JButton();
 
         jDesktopPane1.setLayout(new java.awt.BorderLayout());
 
@@ -59,6 +60,13 @@ public class frmLogin extends javax.swing.JInternalFrame {
         });
 
         registerPromptLabel.setText("Not a registered user? Register here!");
+
+        loginClosebtn.setText("Close");
+        loginClosebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginClosebtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,13 +96,19 @@ public class frmLogin extends javax.swing.JInternalFrame {
                         .addGap(264, 264, 264)
                         .addComponent(registerPromptLabel)))
                 .addContainerGap(163, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(loginClosebtn)
+                .addGap(51, 51, 51))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(35, 35, 35)
                 .addComponent(loginLabel)
-                .addGap(52, 52, 52)
+                .addGap(23, 23, 23)
+                .addComponent(loginClosebtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailLoginField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -110,7 +124,7 @@ public class frmLogin extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginConfirmationButton)
                     .addComponent(registerScreenButton))
-                .addGap(0, 173, Short.MAX_VALUE))
+                .addGap(0, 144, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,11 +138,17 @@ public class frmLogin extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_registerScreenButtonActionPerformed
 
+    private void loginClosebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginClosebtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_loginClosebtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField emailLoginField;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JButton loginClosebtn;
     private javax.swing.JButton loginConfirmationButton;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JLabel passwordLabel;

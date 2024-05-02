@@ -39,6 +39,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         passwordField = new javax.swing.JPasswordField();
         registerNewUserLabel = new javax.swing.JLabel();
         registerConfirmationButton = new javax.swing.JButton();
+        registerClosebtn = new javax.swing.JButton();
 
         nameField.setText("Ex: John Smith");
         nameField.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +68,13 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
 
         registerConfirmationButton.setText("Enter");
 
+        registerClosebtn.setText("Close");
+        registerClosebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerClosebtnActionPerformed(evt);
+            }
+        });
+
         jDesktopPane1.setLayer(nameField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(nameLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(emailField, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -79,6 +87,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayer(passwordField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(registerNewUserLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(registerConfirmationButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(registerClosebtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -91,7 +100,10 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(registerConfirmationButton)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addComponent(registerConfirmationButton)
+                        .addGap(83, 83, 83)
+                        .addComponent(registerClosebtn))
                     .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(idLabel)
                         .addComponent(emailLabel)
@@ -131,7 +143,9 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(registerConfirmationButton)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(registerConfirmationButton)
+                    .addComponent(registerClosebtn))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -143,6 +157,11 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
     private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nameFieldActionPerformed
+
+    private void registerClosebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerClosebtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_registerClosebtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -157,6 +176,7 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JTextField phoneField;
     private javax.swing.JLabel phoneLabel;
+    private javax.swing.JButton registerClosebtn;
     private javax.swing.JButton registerConfirmationButton;
     private javax.swing.JLabel registerNewUserLabel;
     // End of variables declaration//GEN-END:variables

@@ -77,17 +77,7 @@ public class frmMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jdpContainerLayout = new javax.swing.GroupLayout(jdpContainer);
-        jdpContainer.setLayout(jdpContainerLayout);
-        jdpContainerLayout.setHorizontalGroup(
-            jdpContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 481, Short.MAX_VALUE)
-        );
-        jdpContainerLayout.setVerticalGroup(
-            jdpContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 397, Short.MAX_VALUE)
-        );
-
+        jdpContainer.setLayout(new java.awt.BorderLayout());
         getContentPane().add(jdpContainer, java.awt.BorderLayout.CENTER);
 
         mnuFile.setText("File");
