@@ -61,6 +61,14 @@
                 <Property name="text" type="java.lang.String" value="Events"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniViewUsers">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Users"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniViewUsersActionPerformed"/>
+              </Events>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="mnuSearch">
@@ -84,16 +92,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Club"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniCreateClubActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniCreateAnnouncement">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Announcements"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniCreateAnnouncementActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniCreateEvents">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Events"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniCreateEventsActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

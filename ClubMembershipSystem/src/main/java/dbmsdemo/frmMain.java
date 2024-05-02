@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package dbmsdemo;
-import dbmsdemo.frmLogin;
+import dbmsdemo.*;
+import dbmsdemo.frmViewUsers;
 import java.awt.Toolkit;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,6 +41,7 @@ public class frmMain extends javax.swing.JFrame {
         forms.put("frmViewEvent", frmViewEvent);
         forms.put("frmViewClub", frmViewClub);
         
+        
      forms.values().forEach((frm) ->{
          jdpContainer.add(frm);
      });
@@ -64,6 +66,7 @@ public class frmMain extends javax.swing.JFrame {
         mniViewClub = new javax.swing.JMenuItem();
         mniViewAnnouncement = new javax.swing.JMenuItem();
         mniViewEvent = new javax.swing.JMenuItem();
+        mniViewUsers = new javax.swing.JMenuItem();
         mnuSearch = new javax.swing.JMenu();
         mniSearchClub = new javax.swing.JMenuItem();
         mnuCreate = new javax.swing.JMenu();
@@ -123,6 +126,14 @@ public class frmMain extends javax.swing.JFrame {
         mniViewEvent.setText("Events");
         mnuView.add(mniViewEvent);
 
+        mniViewUsers.setText("Users");
+        mniViewUsers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniViewUsersActionPerformed(evt);
+            }
+        });
+        mnuView.add(mniViewUsers);
+
         jMenuBar1.add(mnuView);
 
         mnuSearch.setText("Search");
@@ -135,12 +146,27 @@ public class frmMain extends javax.swing.JFrame {
         mnuCreate.setText("Create");
 
         mniCreateClub.setText("Club");
+        mniCreateClub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniCreateClubActionPerformed(evt);
+            }
+        });
         mnuCreate.add(mniCreateClub);
 
         mniCreateAnnouncement.setText("Announcements");
+        mniCreateAnnouncement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniCreateAnnouncementActionPerformed(evt);
+            }
+        });
         mnuCreate.add(mniCreateAnnouncement);
 
         mniCreateEvents.setText("Events");
+        mniCreateEvents.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniCreateEventsActionPerformed(evt);
+            }
+        });
         mnuCreate.add(mniCreateEvents);
 
         jMenuBar1.add(mnuCreate);
@@ -178,6 +204,27 @@ public class frmMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_mniExitActionPerformed
+
+    private void mniViewUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniViewUsersActionPerformed
+        // TODO add your handling code here:
+        frmViewUsers frmViewUsers = new frmViewUsers();
+        frmViewUsers.setVisible(true);
+    }//GEN-LAST:event_mniViewUsersActionPerformed
+
+    private void mniCreateClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCreateClubActionPerformed
+        // TODO add your handling code here:
+        frmAddClub.setVisible(true);
+    }//GEN-LAST:event_mniCreateClubActionPerformed
+
+    private void mniCreateAnnouncementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCreateAnnouncementActionPerformed
+        // TODO add your handling code here:
+        frmAddAnnouncement.setVisible(true);
+    }//GEN-LAST:event_mniCreateAnnouncementActionPerformed
+
+    private void mniCreateEventsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCreateEventsActionPerformed
+        // TODO add your handling code here:
+        frmAddEvent.setVisible(true);
+    }//GEN-LAST:event_mniCreateEventsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,6 +280,7 @@ public class frmMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem mniViewAnnouncement;
     private javax.swing.JMenuItem mniViewClub;
     private javax.swing.JMenuItem mniViewEvent;
+    private javax.swing.JMenuItem mniViewUsers;
     private javax.swing.JMenu mnuCreate;
     private javax.swing.JMenu mnuFile;
     private javax.swing.JMenu mnuManage;

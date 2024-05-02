@@ -31,6 +31,7 @@ public class frmAddAnnouncement extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         announcementTextField = new javax.swing.JTextField();
         enterButton = new javax.swing.JButton();
+        createAnnouncementclosebtn = new javax.swing.JButton();
 
         jTextField2.setText("jTextField2");
 
@@ -44,9 +45,17 @@ public class frmAddAnnouncement extends javax.swing.JInternalFrame {
 
         enterButton.setText("Enter");
 
+        createAnnouncementclosebtn.setText("Close");
+        createAnnouncementclosebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createAnnouncementclosebtnActionPerformed(evt);
+            }
+        });
+
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(announcementTextField, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(enterButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(createAnnouncementclosebtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -55,10 +64,16 @@ public class frmAddAnnouncement extends javax.swing.JInternalFrame {
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(announcementTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(enterButton))
-                .addContainerGap())
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(announcementTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addComponent(enterButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(createAnnouncementclosebtn)
+                        .addGap(174, 174, 174))))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,7 +83,9 @@ public class frmAddAnnouncement extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(announcementTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enterButton)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enterButton)
+                    .addComponent(createAnnouncementclosebtn))
                 .addGap(57, 57, 57))
         );
 
@@ -81,9 +98,15 @@ public class frmAddAnnouncement extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_announcementTextFieldActionPerformed
 
+    private void createAnnouncementclosebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAnnouncementclosebtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_createAnnouncementclosebtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField announcementTextField;
+    private javax.swing.JButton createAnnouncementclosebtn;
     private javax.swing.JButton enterButton;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;

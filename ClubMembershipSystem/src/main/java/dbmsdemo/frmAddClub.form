@@ -42,20 +42,29 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="createClubLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="whereMeetingLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="clubLocationField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="clubNameField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="nameClubLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="clubTimeField" alignment="0" pref="202" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="createClubLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="whereMeetingLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="clubLocationField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="clubNameField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nameClubLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="clubTimeField" alignment="0" pref="202" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="clubTimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="clubDaysField" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="239" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="clubTimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="submitButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="clubDaysField" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="submitButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="createclubclosebtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="239" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -80,9 +89,18 @@
                   <Component id="clubTimeLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Component id="clubTimeField" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="submitButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="149" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="submitButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="149" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="24" max="32767" attributes="0"/>
+                          <Component id="createclubclosebtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -124,6 +142,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
@@ -133,6 +154,14 @@
         <Component class="javax.swing.JTextField" name="clubDaysField">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clubDaysFieldActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="createclubclosebtn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Close"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createclubclosebtnActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

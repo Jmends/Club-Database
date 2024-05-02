@@ -4,6 +4,7 @@
  */
 package dbmsdemo;
 
+
 /**
  *
  * @author kligs
@@ -163,6 +164,16 @@ public class frmRegisterUser extends javax.swing.JInternalFrame {
         dispose();
     }//GEN-LAST:event_registerClosebtnActionPerformed
 
+    private void registerUser(){
+        String name = nameField.getText();
+        String email = emailField.getText();
+        String phoneNumber = phoneField.getText();
+        String schoolID = idField.getText();
+        char[] passwordchar = passwordField.getPassword();
+        String password = new String(passwordchar);
+        
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField emailField;
